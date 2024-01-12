@@ -1,0 +1,192 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SWRModelStoreContainer" CdmEntityContainer="SWREntities">
+    <EntitySetMapping Name="CIUDADES">
+      <EntityTypeMapping TypeName="SWRModel.CIUDADES">
+        <MappingFragment StoreEntitySet="CIUDADES">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="IDPAIS" ColumnName="IDPAIS" />
+          <ScalarProperty Name="NOMBRE_CIUDAD" ColumnName="NOMBRE_CIUDAD" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CIUDADES_TIPO_RECOGIDAS">
+      <EntityTypeMapping TypeName="SWRModel.CIUDADES_TIPO_RECOGIDAS">
+        <MappingFragment StoreEntitySet="CIUDADES_TIPO_RECOGIDAS">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="IDCIUDAD" ColumnName="IDCIUDAD" />
+          <ScalarProperty Name="IDTIPORECOGIDA" ColumnName="IDTIPORECOGIDA" />
+          <ScalarProperty Name="LIMITE" ColumnName="LIMITE" />
+          <ScalarProperty Name="DIAS_ELIMINACION" ColumnName="DIAS_ELIMINACION" />
+          <ScalarProperty Name="DIAS_FINALIZACION" ColumnName="DIAS_FINALIZACION" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CONFIGURACION_EXCEL">
+      <EntityTypeMapping TypeName="SWRModel.CONFIGURACION_EXCEL">
+        <MappingFragment StoreEntitySet="CONFIGURACION_EXCEL">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="IDCIUDAD" ColumnName="IDCIUDAD" />
+          <ScalarProperty Name="IDTIPO_RECOGIDA" ColumnName="IDTIPO_RECOGIDA" />
+          <ScalarProperty Name="NOMBRE_CAMPO" ColumnName="NOMBRE_CAMPO" />
+          <ScalarProperty Name="COLUMNA_CAMPO" ColumnName="COLUMNA_CAMPO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EMPRESAS">
+      <EntityTypeMapping TypeName="SWRModel.EMPRESAS">
+        <MappingFragment StoreEntitySet="EMPRESAS">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ESTADOS">
+      <EntityTypeMapping TypeName="SWRModel.ESTADOS">
+        <MappingFragment StoreEntitySet="ESTADOS">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ESTADOS_PUNTOS">
+      <EntityTypeMapping TypeName="SWRModel.ESTADOS_PUNTOS">
+        <MappingFragment StoreEntitySet="ESTADOS_PUNTOS">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FACTURACION">
+      <EntityTypeMapping TypeName="SWRModel.FACTURACION">
+        <MappingFragment StoreEntitySet="FACTURACION">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="IDCIUDAD" ColumnName="IDCIUDAD" />
+          <ScalarProperty Name="IDTIPORUTA" ColumnName="IDTIPORUTA" />
+          <ScalarProperty Name="MES" ColumnName="MES" />
+          <ScalarProperty Name="ANIO" ColumnName="ANIO" />
+          <ScalarProperty Name="NUMERO_PUNTOS" ColumnName="NUMERO_PUNTOS" />
+          <ScalarProperty Name="TOTAL" ColumnName="TOTAL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HISTORIAL">
+      <EntityTypeMapping TypeName="SWRModel.HISTORIAL">
+        <MappingFragment StoreEntitySet="HISTORIAL">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="IDUSUARIO" ColumnName="IDUSUARIO" />
+          <ScalarProperty Name="IDRUTA" ColumnName="IDRUTA" />
+          <ScalarProperty Name="IDPUNTO" ColumnName="IDPUNTO" />
+          <ScalarProperty Name="ACCION" ColumnName="ACCION" />
+          <ScalarProperty Name="FECHA" ColumnName="FECHA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PAISES">
+      <EntityTypeMapping TypeName="SWRModel.PAISES">
+        <MappingFragment StoreEntitySet="PAISES">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="PAIS" ColumnName="PAIS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PUNTOS_RUTA">
+      <EntityTypeMapping TypeName="SWRModel.PUNTOS_RUTA">
+        <MappingFragment StoreEntitySet="PUNTOS_RUTA">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="IDCIUDAD" ColumnName="IDCIUDAD" />
+          <ScalarProperty Name="IDRUTA" ColumnName="IDRUTA" />
+          <ScalarProperty Name="CODIGO" ColumnName="CODIGO" />
+          <ScalarProperty Name="FECHA" ColumnName="FECHA" />
+          <ScalarProperty Name="FECHA_DEMANDA" ColumnName="FECHA_DEMANDA" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="LOCALIZACION" ColumnName="LOCALIZACION" />
+          <ScalarProperty Name="OBSERVACIONES" ColumnName="OBSERVACIONES" />
+          <ScalarProperty Name="IDESTADO" ColumnName="IDESTADO" />
+          <ScalarProperty Name="LONGITUD" ColumnName="LONGITUD" />
+          <ScalarProperty Name="LATITUD" ColumnName="LATITUD" />
+          <ScalarProperty Name="ELIMINADO" ColumnName="ELIMINADO" />
+          <ScalarProperty Name="ITINERARIO" ColumnName="ITINERARIO" />
+          <ScalarProperty Name="ORDEN" ColumnName="ORDEN" />
+          <ScalarProperty Name="COORDENADAS_CALCUDADAS" ColumnName="COORDENADAS_CALCUDADAS" />
+          <ScalarProperty Name="DISTANCIAS_CALCUDADAS" ColumnName="DISTANCIAS_CALCUDADAS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ROLES">
+      <EntityTypeMapping TypeName="SWRModel.ROLES">
+        <MappingFragment StoreEntitySet="ROLES">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ROL" ColumnName="ROL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RUTAS">
+      <EntityTypeMapping TypeName="SWRModel.RUTAS">
+        <MappingFragment StoreEntitySet="RUTAS">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="IDCIUDAD" ColumnName="IDCIUDAD" />
+          <ScalarProperty Name="IDTIPORECOGIDA" ColumnName="IDTIPORECOGIDA" />
+          <ScalarProperty Name="IDESTADO" ColumnName="IDESTADO" />
+          <ScalarProperty Name="NUMERO_PUNTOS" ColumnName="NUMERO_PUNTOS" />
+          <ScalarProperty Name="ARCHIVO_ORIGEN" ColumnName="ARCHIVO_ORIGEN" />
+          <ScalarProperty Name="IDUSUARIO" ColumnName="IDUSUARIO" />
+          <ScalarProperty Name="FECHA_INCORPORACION" ColumnName="FECHA_INCORPORACION" />
+          <ScalarProperty Name="FECHA_OPTIMIZACIÓN" ColumnName="FECHA_OPTIMIZACIÓN" />
+          <ScalarProperty Name="FACTURADA" ColumnName="FACTURADA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TARIFAS">
+      <EntityTypeMapping TypeName="SWRModel.TARIFAS">
+        <MappingFragment StoreEntitySet="TARIFAS">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="IDCIUDAD" ColumnName="IDCIUDAD" />
+          <ScalarProperty Name="IDTIPORUTA" ColumnName="IDTIPORUTA" />
+          <ScalarProperty Name="PRECIO_PUNTO" ColumnName="PRECIO_PUNTO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TIPO_RECOGIDAS">
+      <EntityTypeMapping TypeName="SWRModel.TIPO_RECOGIDAS">
+        <MappingFragment StoreEntitySet="TIPO_RECOGIDAS">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="TIPO" ColumnName="TIPO" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="USUARIO_CIUDADES">
+      <EntityTypeMapping TypeName="SWRModel.USUARIO_CIUDADES">
+        <MappingFragment StoreEntitySet="USUARIO_CIUDADES">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="IDUSUARIO" ColumnName="IDUSUARIO" />
+          <ScalarProperty Name="IDCIUDAD" ColumnName="IDCIUDAD" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="USUARIOS">
+      <EntityTypeMapping TypeName="SWRModel.USUARIOS">
+        <MappingFragment StoreEntitySet="USUARIOS">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="ACTIVO" ColumnName="ACTIVO" />
+          <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+          <ScalarProperty Name="IDROL" ColumnName="IDROL" />
+          <ScalarProperty Name="IDEMPRESA" ColumnName="IDEMPRESA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DISTANCIAS">
+      <EntityTypeMapping TypeName="SWRModel.DISTANCIAS">
+        <MappingFragment StoreEntitySet="DISTANCIAS">
+          <ScalarProperty Name="ID_ORIGEN" ColumnName="ID_ORIGEN" />
+          <ScalarProperty Name="ID_DESTINO" ColumnName="ID_DESTINO" />
+          <ScalarProperty Name="DISTANCIA" ColumnName="DISTANCIA" />
+          <ScalarProperty Name="TIEMPO" ColumnName="TIEMPO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

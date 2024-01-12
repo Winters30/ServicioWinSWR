@@ -1,0 +1,643 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SWRModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="CIUDADES">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IDPAIS" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="NOMBRE_CIUDAD" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="PAISES" Relationship="Self.FK_CIUDADES_PAISES" FromRole="CIUDADES" ToRole="PAISES" />
+    <NavigationProperty Name="CIUDADES_TIPO_RECOGIDAS" Relationship="Self.FK_CIUDADES_TIPO_RECOGIDAS_CIUDADES_TIPO_RECOGIDAS" FromRole="CIUDADES" ToRole="CIUDADES_TIPO_RECOGIDAS" />
+    <NavigationProperty Name="CONFIGURACION_EXCEL" Relationship="Self.FK_CONFIGURACION_EXCEL_CIUDADES" FromRole="CIUDADES" ToRole="CONFIGURACION_EXCEL" />
+    <NavigationProperty Name="FACTURACION" Relationship="Self.FK_FACTURACION_CIUDADES" FromRole="CIUDADES" ToRole="FACTURACION" />
+    <NavigationProperty Name="PUNTOS_RUTA" Relationship="Self.FK_PUNTOS_RUTA_CIUDADES" FromRole="CIUDADES" ToRole="PUNTOS_RUTA" />
+    <NavigationProperty Name="RUTAS" Relationship="Self.FK_RUTAS_CIUDADES" FromRole="CIUDADES" ToRole="RUTAS" />
+    <NavigationProperty Name="TARIFAS" Relationship="Self.FK_TARIFAS_CIUDADES" FromRole="CIUDADES" ToRole="TARIFAS" />
+    <NavigationProperty Name="USUARIO_CIUDADES" Relationship="Self.FK_USUARIO_CIUDADES_CIUDADES" FromRole="CIUDADES" ToRole="USUARIO_CIUDADES" />
+  </EntityType>
+  <EntityType Name="CIUDADES_TIPO_RECOGIDAS">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Guid" Nullable="false" />
+    <Property Name="IDCIUDAD" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IDTIPORECOGIDA" Type="Int32" Nullable="false" />
+    <Property Name="LIMITE" Type="Int32" />
+    <Property Name="DIAS_ELIMINACION" Type="Int32" />
+    <Property Name="DIAS_FINALIZACION" Type="Int32" />
+    <NavigationProperty Name="CIUDADES" Relationship="Self.FK_CIUDADES_TIPO_RECOGIDAS_CIUDADES_TIPO_RECOGIDAS" FromRole="CIUDADES_TIPO_RECOGIDAS" ToRole="CIUDADES" />
+    <NavigationProperty Name="TIPO_RECOGIDAS" Relationship="Self.FK_CIUDADES_TIPO_RECOGIDAS_TIPO_RECOGIDAS" FromRole="CIUDADES_TIPO_RECOGIDAS" ToRole="TIPO_RECOGIDAS" />
+  </EntityType>
+  <EntityType Name="CONFIGURACION_EXCEL">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Guid" Nullable="false" />
+    <Property Name="IDCIUDAD" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IDTIPO_RECOGIDA" Type="Int32" Nullable="false" />
+    <Property Name="NOMBRE_CAMPO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="COLUMNA_CAMPO" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="CIUDADES" Relationship="Self.FK_CONFIGURACION_EXCEL_CIUDADES" FromRole="CONFIGURACION_EXCEL" ToRole="CIUDADES" />
+    <NavigationProperty Name="TIPO_RECOGIDAS" Relationship="Self.FK_CONFIGURACION_EXCEL_TIPO_RECOGIDAS" FromRole="CONFIGURACION_EXCEL" ToRole="TIPO_RECOGIDAS" />
+  </EntityType>
+  <EntityType Name="EMPRESAS">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="NOMBRE" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="USUARIOS" Relationship="Self.FK_Usuarios_Empresas" FromRole="EMPRESAS" ToRole="USUARIOS" />
+  </EntityType>
+  <EntityType Name="ESTADOS">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="NOMBRE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="RUTAS" Relationship="Self.FK_RUTAS_ESTADOS" FromRole="ESTADOS" ToRole="RUTAS" />
+  </EntityType>
+  <EntityType Name="ESTADOS_PUNTOS">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="ESTADO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="PUNTOS_RUTA" Relationship="Self.FK_PUNTOS_RUTA_ESTADOS_PUNTOS" FromRole="ESTADOS_PUNTOS" ToRole="PUNTOS_RUTA" />
+  </EntityType>
+  <EntityType Name="FACTURACION">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Guid" Nullable="false" />
+    <Property Name="IDCIUDAD" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="IDTIPORUTA" Type="Int32" />
+    <Property Name="MES" Type="Int32" />
+    <Property Name="ANIO" Type="Int32" />
+    <Property Name="NUMERO_PUNTOS" Type="Int32" />
+    <Property Name="TOTAL" Type="Decimal" Precision="18" Scale="0" />
+    <NavigationProperty Name="CIUDADES" Relationship="Self.FK_FACTURACION_CIUDADES" FromRole="FACTURACION" ToRole="CIUDADES" />
+    <NavigationProperty Name="TIPO_RECOGIDAS" Relationship="Self.FK_FACTURACION_TIPO_RECOGIDAS" FromRole="FACTURACION" ToRole="TIPO_RECOGIDAS" />
+  </EntityType>
+  <EntityType Name="HISTORIAL">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Guid" Nullable="false" />
+    <Property Name="IDUSUARIO" Type="Guid" Nullable="false" />
+    <Property Name="IDRUTA" Type="Guid" Nullable="false" />
+    <Property Name="IDPUNTO" Type="Guid" />
+    <Property Name="ACCION" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FECHA" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="RUTAS" Relationship="Self.FK_HISTORIAL_RUTAS" FromRole="HISTORIAL" ToRole="RUTAS" />
+    <NavigationProperty Name="USUARIOS" Relationship="Self.FK_HISTORIAL_USUARIOS" FromRole="HISTORIAL" ToRole="USUARIOS" />
+  </EntityType>
+  <EntityType Name="PAISES">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="PAIS" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="CIUDADES" Relationship="Self.FK_CIUDADES_PAISES" FromRole="PAISES" ToRole="CIUDADES" />
+  </EntityType>
+  <EntityType Name="PUNTOS_RUTA">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Guid" Nullable="false" />
+    <Property Name="IDCIUDAD" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IDRUTA" Type="Guid" Nullable="false" />
+    <Property Name="CODIGO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FECHA" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="FECHA_DEMANDA" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="DESCRIPCION" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="LOCALIZACION" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="OBSERVACIONES" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="IDESTADO" Type="Int32" Nullable="false" />
+    <Property Name="LONGITUD" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LATITUD" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ELIMINADO" Type="Boolean" Nullable="false" />
+    <Property Name="ITINERARIO" Type="Int32" />
+    <Property Name="ORDEN" Type="Int32" />
+    <Property Name="COORDENADAS_CALCUDADAS" Type="Boolean" />
+    <Property Name="DISTANCIAS_CALCUDADAS" Type="Boolean" />
+    <NavigationProperty Name="CIUDADES" Relationship="Self.FK_PUNTOS_RUTA_CIUDADES" FromRole="PUNTOS_RUTA" ToRole="CIUDADES" />
+    <NavigationProperty Name="ESTADOS_PUNTOS" Relationship="Self.FK_PUNTOS_RUTA_ESTADOS_PUNTOS" FromRole="PUNTOS_RUTA" ToRole="ESTADOS_PUNTOS" />
+    <NavigationProperty Name="DISTANCIAS" Relationship="Self.FK_DISTANCIAS_PUNTOS_RUTA" FromRole="PUNTOS_RUTA" ToRole="DISTANCIAS" />
+    <NavigationProperty Name="DISTANCIAS1" Relationship="Self.FK_DISTANCIAS_PUNTOS_RUTA1" FromRole="PUNTOS_RUTA" ToRole="DISTANCIAS" />
+    <NavigationProperty Name="PUNTOS_RUTA1" Relationship="Self.FK_PUNTOS_RUTA_PUNTOS_RUTA" FromRole="PUNTOS_RUTA" ToRole="PUNTOS_RUTA1" />
+    <NavigationProperty Name="PUNTOS_RUTA2" Relationship="Self.FK_PUNTOS_RUTA_PUNTOS_RUTA" FromRole="PUNTOS_RUTA1" ToRole="PUNTOS_RUTA" />
+    <NavigationProperty Name="RUTAS" Relationship="Self.FK_PUNTOS_RUTA_RUTAS" FromRole="PUNTOS_RUTA" ToRole="RUTAS" />
+  </EntityType>
+  <EntityType Name="ROLES">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="ROL" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="USUARIOS" Relationship="Self.FK_USUARIOS_ROLES" FromRole="ROLES" ToRole="USUARIOS" />
+  </EntityType>
+  <EntityType Name="RUTAS">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Guid" Nullable="false" />
+    <Property Name="IDCIUDAD" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IDTIPORECOGIDA" Type="Int32" Nullable="false" />
+    <Property Name="IDESTADO" Type="Int32" Nullable="false" />
+    <Property Name="NUMERO_PUNTOS" Type="Int32" Nullable="false" />
+    <Property Name="ARCHIVO_ORIGEN" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="IDUSUARIO" Type="Guid" Nullable="false" />
+    <Property Name="FECHA_INCORPORACION" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="FECHA_OPTIMIZACIÓN" Type="DateTime" Precision="3" />
+    <Property Name="FACTURADA" Type="Boolean" />
+    <NavigationProperty Name="CIUDADES" Relationship="Self.FK_RUTAS_CIUDADES" FromRole="RUTAS" ToRole="CIUDADES" />
+    <NavigationProperty Name="ESTADOS" Relationship="Self.FK_RUTAS_ESTADOS" FromRole="RUTAS" ToRole="ESTADOS" />
+    <NavigationProperty Name="HISTORIAL" Relationship="Self.FK_HISTORIAL_RUTAS" FromRole="RUTAS" ToRole="HISTORIAL" />
+    <NavigationProperty Name="PUNTOS_RUTA" Relationship="Self.FK_PUNTOS_RUTA_RUTAS" FromRole="RUTAS" ToRole="PUNTOS_RUTA" />
+    <NavigationProperty Name="TIPO_RECOGIDAS" Relationship="Self.FK_RUTAS_TIPO_RECOGIDAS" FromRole="RUTAS" ToRole="TIPO_RECOGIDAS" />
+    <NavigationProperty Name="USUARIOS" Relationship="Self.FK_RUTAS_USUARIOS" FromRole="RUTAS" ToRole="USUARIOS" />
+  </EntityType>
+  <EntityType Name="TARIFAS">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Guid" Nullable="false" />
+    <Property Name="IDCIUDAD" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IDTIPORUTA" Type="Int32" Nullable="false" />
+    <Property Name="PRECIO_PUNTO" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <NavigationProperty Name="CIUDADES" Relationship="Self.FK_TARIFAS_CIUDADES" FromRole="TARIFAS" ToRole="CIUDADES" />
+    <NavigationProperty Name="TIPO_RECOGIDAS" Relationship="Self.FK_TARIFAS_TIPO_RECOGIDAS" FromRole="TARIFAS" ToRole="TIPO_RECOGIDAS" />
+  </EntityType>
+  <EntityType Name="TIPO_RECOGIDAS">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="TIPO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="NOMBRE" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DESCRIPCION" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="CIUDADES_TIPO_RECOGIDAS" Relationship="Self.FK_CIUDADES_TIPO_RECOGIDAS_TIPO_RECOGIDAS" FromRole="TIPO_RECOGIDAS" ToRole="CIUDADES_TIPO_RECOGIDAS" />
+    <NavigationProperty Name="CONFIGURACION_EXCEL" Relationship="Self.FK_CONFIGURACION_EXCEL_TIPO_RECOGIDAS" FromRole="TIPO_RECOGIDAS" ToRole="CONFIGURACION_EXCEL" />
+    <NavigationProperty Name="FACTURACION" Relationship="Self.FK_FACTURACION_TIPO_RECOGIDAS" FromRole="TIPO_RECOGIDAS" ToRole="FACTURACION" />
+    <NavigationProperty Name="RUTAS" Relationship="Self.FK_RUTAS_TIPO_RECOGIDAS" FromRole="TIPO_RECOGIDAS" ToRole="RUTAS" />
+    <NavigationProperty Name="TARIFAS" Relationship="Self.FK_TARIFAS_TIPO_RECOGIDAS" FromRole="TIPO_RECOGIDAS" ToRole="TARIFAS" />
+  </EntityType>
+  <EntityType Name="USUARIO_CIUDADES">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Guid" Nullable="false" />
+    <Property Name="IDUSUARIO" Type="Guid" Nullable="false" />
+    <Property Name="IDCIUDAD" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="CIUDADES" Relationship="Self.FK_USUARIO_CIUDADES_CIUDADES" FromRole="USUARIO_CIUDADES" ToRole="CIUDADES" />
+    <NavigationProperty Name="USUARIOS" Relationship="Self.FK_USUARIO_CIUDADES_USUARIOS" FromRole="USUARIO_CIUDADES" ToRole="USUARIOS" />
+  </EntityType>
+  <EntityType Name="USUARIOS">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Guid" Nullable="false" />
+    <Property Name="NOMBRE" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ACTIVO" Type="Boolean" Nullable="false" />
+    <Property Name="EMAIL" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IDROL" Type="Int32" Nullable="false" />
+    <Property Name="IDEMPRESA" Type="Int32" />
+    <NavigationProperty Name="EMPRESAS" Relationship="Self.FK_Usuarios_Empresas" FromRole="USUARIOS" ToRole="EMPRESAS" />
+    <NavigationProperty Name="HISTORIAL" Relationship="Self.FK_HISTORIAL_USUARIOS" FromRole="USUARIOS" ToRole="HISTORIAL" />
+    <NavigationProperty Name="ROLES" Relationship="Self.FK_USUARIOS_ROLES" FromRole="USUARIOS" ToRole="ROLES" />
+    <NavigationProperty Name="RUTAS" Relationship="Self.FK_RUTAS_USUARIOS" FromRole="USUARIOS" ToRole="RUTAS" />
+    <NavigationProperty Name="USUARIO_CIUDADES" Relationship="Self.FK_USUARIO_CIUDADES_USUARIOS" FromRole="USUARIOS" ToRole="USUARIO_CIUDADES" />
+  </EntityType>
+  <EntityType Name="DISTANCIAS">
+    <Key>
+      <PropertyRef Name="ID_ORIGEN" />
+      <PropertyRef Name="ID_DESTINO" />
+    </Key>
+    <Property Name="ID_ORIGEN" Type="Guid" Nullable="false" />
+    <Property Name="ID_DESTINO" Type="Guid" Nullable="false" />
+    <Property Name="DISTANCIA" Type="Double" />
+    <Property Name="TIEMPO" Type="Double" />
+    <NavigationProperty Name="PUNTOS_RUTA" Relationship="Self.FK_DISTANCIAS_PUNTOS_RUTA" FromRole="DISTANCIAS" ToRole="PUNTOS_RUTA" />
+    <NavigationProperty Name="PUNTOS_RUTA1" Relationship="Self.FK_DISTANCIAS_PUNTOS_RUTA1" FromRole="DISTANCIAS" ToRole="PUNTOS_RUTA" />
+  </EntityType>
+  <Association Name="FK_CIUDADES_PAISES">
+    <End Role="PAISES" Type="Self.PAISES" Multiplicity="1" />
+    <End Role="CIUDADES" Type="Self.CIUDADES" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PAISES">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="CIUDADES">
+        <PropertyRef Name="IDPAIS" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CIUDADES_TIPO_RECOGIDAS_CIUDADES_TIPO_RECOGIDAS">
+    <End Role="CIUDADES" Type="Self.CIUDADES" Multiplicity="1" />
+    <End Role="CIUDADES_TIPO_RECOGIDAS" Type="Self.CIUDADES_TIPO_RECOGIDAS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CIUDADES">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="CIUDADES_TIPO_RECOGIDAS">
+        <PropertyRef Name="IDCIUDAD" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CONFIGURACION_EXCEL_CIUDADES">
+    <End Role="CIUDADES" Type="Self.CIUDADES" Multiplicity="1" />
+    <End Role="CONFIGURACION_EXCEL" Type="Self.CONFIGURACION_EXCEL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CIUDADES">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="CONFIGURACION_EXCEL">
+        <PropertyRef Name="IDCIUDAD" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FACTURACION_CIUDADES">
+    <End Role="CIUDADES" Type="Self.CIUDADES" Multiplicity="0..1" />
+    <End Role="FACTURACION" Type="Self.FACTURACION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CIUDADES">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="FACTURACION">
+        <PropertyRef Name="IDCIUDAD" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PUNTOS_RUTA_CIUDADES">
+    <End Role="CIUDADES" Type="Self.CIUDADES" Multiplicity="1" />
+    <End Role="PUNTOS_RUTA" Type="Self.PUNTOS_RUTA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CIUDADES">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="PUNTOS_RUTA">
+        <PropertyRef Name="IDCIUDAD" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RUTAS_CIUDADES">
+    <End Role="CIUDADES" Type="Self.CIUDADES" Multiplicity="1" />
+    <End Role="RUTAS" Type="Self.RUTAS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CIUDADES">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="RUTAS">
+        <PropertyRef Name="IDCIUDAD" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TARIFAS_CIUDADES">
+    <End Role="CIUDADES" Type="Self.CIUDADES" Multiplicity="1" />
+    <End Role="TARIFAS" Type="Self.TARIFAS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CIUDADES">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="TARIFAS">
+        <PropertyRef Name="IDCIUDAD" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_USUARIO_CIUDADES_CIUDADES">
+    <End Role="CIUDADES" Type="Self.CIUDADES" Multiplicity="1" />
+    <End Role="USUARIO_CIUDADES" Type="Self.USUARIO_CIUDADES" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CIUDADES">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="USUARIO_CIUDADES">
+        <PropertyRef Name="IDCIUDAD" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CIUDADES_TIPO_RECOGIDAS_TIPO_RECOGIDAS">
+    <End Role="TIPO_RECOGIDAS" Type="Self.TIPO_RECOGIDAS" Multiplicity="1" />
+    <End Role="CIUDADES_TIPO_RECOGIDAS" Type="Self.CIUDADES_TIPO_RECOGIDAS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TIPO_RECOGIDAS">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="CIUDADES_TIPO_RECOGIDAS">
+        <PropertyRef Name="IDTIPORECOGIDA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CONFIGURACION_EXCEL_TIPO_RECOGIDAS">
+    <End Role="TIPO_RECOGIDAS" Type="Self.TIPO_RECOGIDAS" Multiplicity="1" />
+    <End Role="CONFIGURACION_EXCEL" Type="Self.CONFIGURACION_EXCEL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TIPO_RECOGIDAS">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="CONFIGURACION_EXCEL">
+        <PropertyRef Name="IDTIPO_RECOGIDA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Usuarios_Empresas">
+    <End Role="EMPRESAS" Type="Self.EMPRESAS" Multiplicity="0..1" />
+    <End Role="USUARIOS" Type="Self.USUARIOS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EMPRESAS">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="USUARIOS">
+        <PropertyRef Name="IDEMPRESA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RUTAS_ESTADOS">
+    <End Role="ESTADOS" Type="Self.ESTADOS" Multiplicity="1" />
+    <End Role="RUTAS" Type="Self.RUTAS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ESTADOS">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="RUTAS">
+        <PropertyRef Name="IDESTADO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PUNTOS_RUTA_ESTADOS_PUNTOS">
+    <End Role="ESTADOS_PUNTOS" Type="Self.ESTADOS_PUNTOS" Multiplicity="1" />
+    <End Role="PUNTOS_RUTA" Type="Self.PUNTOS_RUTA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ESTADOS_PUNTOS">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="PUNTOS_RUTA">
+        <PropertyRef Name="IDESTADO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FACTURACION_TIPO_RECOGIDAS">
+    <End Role="TIPO_RECOGIDAS" Type="Self.TIPO_RECOGIDAS" Multiplicity="0..1" />
+    <End Role="FACTURACION" Type="Self.FACTURACION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TIPO_RECOGIDAS">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="FACTURACION">
+        <PropertyRef Name="IDTIPORUTA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HISTORIAL_RUTAS">
+    <End Role="RUTAS" Type="Self.RUTAS" Multiplicity="1" />
+    <End Role="HISTORIAL" Type="Self.HISTORIAL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RUTAS">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="HISTORIAL">
+        <PropertyRef Name="IDRUTA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HISTORIAL_USUARIOS">
+    <End Role="USUARIOS" Type="Self.USUARIOS" Multiplicity="1" />
+    <End Role="HISTORIAL" Type="Self.HISTORIAL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="USUARIOS">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="HISTORIAL">
+        <PropertyRef Name="IDUSUARIO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DISTANCIAS_PUNTOS_RUTA">
+    <End Role="PUNTOS_RUTA" Type="Self.PUNTOS_RUTA" Multiplicity="1" />
+    <End Role="DISTANCIAS" Type="Self.DISTANCIAS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PUNTOS_RUTA">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="DISTANCIAS">
+        <PropertyRef Name="ID_ORIGEN" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DISTANCIAS_PUNTOS_RUTA1">
+    <End Role="PUNTOS_RUTA" Type="Self.PUNTOS_RUTA" Multiplicity="1" />
+    <End Role="DISTANCIAS" Type="Self.DISTANCIAS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PUNTOS_RUTA">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="DISTANCIAS">
+        <PropertyRef Name="ID_DESTINO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PUNTOS_RUTA_PUNTOS_RUTA">
+    <End Role="PUNTOS_RUTA" Type="Self.PUNTOS_RUTA" Multiplicity="1" />
+    <End Role="PUNTOS_RUTA1" Type="Self.PUNTOS_RUTA" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="PUNTOS_RUTA">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="PUNTOS_RUTA1">
+        <PropertyRef Name="ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PUNTOS_RUTA_RUTAS">
+    <End Role="RUTAS" Type="Self.RUTAS" Multiplicity="1" />
+    <End Role="PUNTOS_RUTA" Type="Self.PUNTOS_RUTA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RUTAS">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="PUNTOS_RUTA">
+        <PropertyRef Name="IDRUTA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_USUARIOS_ROLES">
+    <End Role="ROLES" Type="Self.ROLES" Multiplicity="1" />
+    <End Role="USUARIOS" Type="Self.USUARIOS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ROLES">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="USUARIOS">
+        <PropertyRef Name="IDROL" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RUTAS_TIPO_RECOGIDAS">
+    <End Role="TIPO_RECOGIDAS" Type="Self.TIPO_RECOGIDAS" Multiplicity="1" />
+    <End Role="RUTAS" Type="Self.RUTAS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TIPO_RECOGIDAS">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="RUTAS">
+        <PropertyRef Name="IDTIPORECOGIDA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RUTAS_USUARIOS">
+    <End Role="USUARIOS" Type="Self.USUARIOS" Multiplicity="1" />
+    <End Role="RUTAS" Type="Self.RUTAS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="USUARIOS">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="RUTAS">
+        <PropertyRef Name="IDUSUARIO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TARIFAS_TIPO_RECOGIDAS">
+    <End Role="TIPO_RECOGIDAS" Type="Self.TIPO_RECOGIDAS" Multiplicity="1" />
+    <End Role="TARIFAS" Type="Self.TARIFAS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TIPO_RECOGIDAS">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="TARIFAS">
+        <PropertyRef Name="IDTIPORUTA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_USUARIO_CIUDADES_USUARIOS">
+    <End Role="USUARIOS" Type="Self.USUARIOS" Multiplicity="1" />
+    <End Role="USUARIO_CIUDADES" Type="Self.USUARIO_CIUDADES" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="USUARIOS">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="USUARIO_CIUDADES">
+        <PropertyRef Name="IDUSUARIO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="SWREntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="CIUDADES" EntityType="Self.CIUDADES" />
+    <EntitySet Name="CIUDADES_TIPO_RECOGIDAS" EntityType="Self.CIUDADES_TIPO_RECOGIDAS" />
+    <EntitySet Name="CONFIGURACION_EXCEL" EntityType="Self.CONFIGURACION_EXCEL" />
+    <EntitySet Name="EMPRESAS" EntityType="Self.EMPRESAS" />
+    <EntitySet Name="ESTADOS" EntityType="Self.ESTADOS" />
+    <EntitySet Name="ESTADOS_PUNTOS" EntityType="Self.ESTADOS_PUNTOS" />
+    <EntitySet Name="FACTURACION" EntityType="Self.FACTURACION" />
+    <EntitySet Name="HISTORIAL" EntityType="Self.HISTORIAL" />
+    <EntitySet Name="PAISES" EntityType="Self.PAISES" />
+    <EntitySet Name="PUNTOS_RUTA" EntityType="Self.PUNTOS_RUTA" />
+    <EntitySet Name="ROLES" EntityType="Self.ROLES" />
+    <EntitySet Name="RUTAS" EntityType="Self.RUTAS" />
+    <EntitySet Name="TARIFAS" EntityType="Self.TARIFAS" />
+    <EntitySet Name="TIPO_RECOGIDAS" EntityType="Self.TIPO_RECOGIDAS" />
+    <EntitySet Name="USUARIO_CIUDADES" EntityType="Self.USUARIO_CIUDADES" />
+    <EntitySet Name="USUARIOS" EntityType="Self.USUARIOS" />
+    <EntitySet Name="DISTANCIAS" EntityType="Self.DISTANCIAS" />
+    <AssociationSet Name="FK_CIUDADES_PAISES" Association="Self.FK_CIUDADES_PAISES">
+      <End Role="PAISES" EntitySet="PAISES" />
+      <End Role="CIUDADES" EntitySet="CIUDADES" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CIUDADES_TIPO_RECOGIDAS_CIUDADES_TIPO_RECOGIDAS" Association="Self.FK_CIUDADES_TIPO_RECOGIDAS_CIUDADES_TIPO_RECOGIDAS">
+      <End Role="CIUDADES" EntitySet="CIUDADES" />
+      <End Role="CIUDADES_TIPO_RECOGIDAS" EntitySet="CIUDADES_TIPO_RECOGIDAS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CONFIGURACION_EXCEL_CIUDADES" Association="Self.FK_CONFIGURACION_EXCEL_CIUDADES">
+      <End Role="CIUDADES" EntitySet="CIUDADES" />
+      <End Role="CONFIGURACION_EXCEL" EntitySet="CONFIGURACION_EXCEL" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FACTURACION_CIUDADES" Association="Self.FK_FACTURACION_CIUDADES">
+      <End Role="CIUDADES" EntitySet="CIUDADES" />
+      <End Role="FACTURACION" EntitySet="FACTURACION" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PUNTOS_RUTA_CIUDADES" Association="Self.FK_PUNTOS_RUTA_CIUDADES">
+      <End Role="CIUDADES" EntitySet="CIUDADES" />
+      <End Role="PUNTOS_RUTA" EntitySet="PUNTOS_RUTA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RUTAS_CIUDADES" Association="Self.FK_RUTAS_CIUDADES">
+      <End Role="CIUDADES" EntitySet="CIUDADES" />
+      <End Role="RUTAS" EntitySet="RUTAS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TARIFAS_CIUDADES" Association="Self.FK_TARIFAS_CIUDADES">
+      <End Role="CIUDADES" EntitySet="CIUDADES" />
+      <End Role="TARIFAS" EntitySet="TARIFAS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_USUARIO_CIUDADES_CIUDADES" Association="Self.FK_USUARIO_CIUDADES_CIUDADES">
+      <End Role="CIUDADES" EntitySet="CIUDADES" />
+      <End Role="USUARIO_CIUDADES" EntitySet="USUARIO_CIUDADES" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CIUDADES_TIPO_RECOGIDAS_TIPO_RECOGIDAS" Association="Self.FK_CIUDADES_TIPO_RECOGIDAS_TIPO_RECOGIDAS">
+      <End Role="TIPO_RECOGIDAS" EntitySet="TIPO_RECOGIDAS" />
+      <End Role="CIUDADES_TIPO_RECOGIDAS" EntitySet="CIUDADES_TIPO_RECOGIDAS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CONFIGURACION_EXCEL_TIPO_RECOGIDAS" Association="Self.FK_CONFIGURACION_EXCEL_TIPO_RECOGIDAS">
+      <End Role="TIPO_RECOGIDAS" EntitySet="TIPO_RECOGIDAS" />
+      <End Role="CONFIGURACION_EXCEL" EntitySet="CONFIGURACION_EXCEL" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Usuarios_Empresas" Association="Self.FK_Usuarios_Empresas">
+      <End Role="EMPRESAS" EntitySet="EMPRESAS" />
+      <End Role="USUARIOS" EntitySet="USUARIOS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RUTAS_ESTADOS" Association="Self.FK_RUTAS_ESTADOS">
+      <End Role="ESTADOS" EntitySet="ESTADOS" />
+      <End Role="RUTAS" EntitySet="RUTAS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PUNTOS_RUTA_ESTADOS_PUNTOS" Association="Self.FK_PUNTOS_RUTA_ESTADOS_PUNTOS">
+      <End Role="ESTADOS_PUNTOS" EntitySet="ESTADOS_PUNTOS" />
+      <End Role="PUNTOS_RUTA" EntitySet="PUNTOS_RUTA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FACTURACION_TIPO_RECOGIDAS" Association="Self.FK_FACTURACION_TIPO_RECOGIDAS">
+      <End Role="TIPO_RECOGIDAS" EntitySet="TIPO_RECOGIDAS" />
+      <End Role="FACTURACION" EntitySet="FACTURACION" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HISTORIAL_RUTAS" Association="Self.FK_HISTORIAL_RUTAS">
+      <End Role="RUTAS" EntitySet="RUTAS" />
+      <End Role="HISTORIAL" EntitySet="HISTORIAL" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HISTORIAL_USUARIOS" Association="Self.FK_HISTORIAL_USUARIOS">
+      <End Role="USUARIOS" EntitySet="USUARIOS" />
+      <End Role="HISTORIAL" EntitySet="HISTORIAL" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DISTANCIAS_PUNTOS_RUTA" Association="Self.FK_DISTANCIAS_PUNTOS_RUTA">
+      <End Role="PUNTOS_RUTA" EntitySet="PUNTOS_RUTA" />
+      <End Role="DISTANCIAS" EntitySet="DISTANCIAS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DISTANCIAS_PUNTOS_RUTA1" Association="Self.FK_DISTANCIAS_PUNTOS_RUTA1">
+      <End Role="PUNTOS_RUTA" EntitySet="PUNTOS_RUTA" />
+      <End Role="DISTANCIAS" EntitySet="DISTANCIAS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PUNTOS_RUTA_PUNTOS_RUTA" Association="Self.FK_PUNTOS_RUTA_PUNTOS_RUTA">
+      <End Role="PUNTOS_RUTA" EntitySet="PUNTOS_RUTA" />
+      <End Role="PUNTOS_RUTA1" EntitySet="PUNTOS_RUTA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PUNTOS_RUTA_RUTAS" Association="Self.FK_PUNTOS_RUTA_RUTAS">
+      <End Role="RUTAS" EntitySet="RUTAS" />
+      <End Role="PUNTOS_RUTA" EntitySet="PUNTOS_RUTA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_USUARIOS_ROLES" Association="Self.FK_USUARIOS_ROLES">
+      <End Role="ROLES" EntitySet="ROLES" />
+      <End Role="USUARIOS" EntitySet="USUARIOS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RUTAS_TIPO_RECOGIDAS" Association="Self.FK_RUTAS_TIPO_RECOGIDAS">
+      <End Role="TIPO_RECOGIDAS" EntitySet="TIPO_RECOGIDAS" />
+      <End Role="RUTAS" EntitySet="RUTAS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RUTAS_USUARIOS" Association="Self.FK_RUTAS_USUARIOS">
+      <End Role="USUARIOS" EntitySet="USUARIOS" />
+      <End Role="RUTAS" EntitySet="RUTAS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TARIFAS_TIPO_RECOGIDAS" Association="Self.FK_TARIFAS_TIPO_RECOGIDAS">
+      <End Role="TIPO_RECOGIDAS" EntitySet="TIPO_RECOGIDAS" />
+      <End Role="TARIFAS" EntitySet="TARIFAS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_USUARIO_CIUDADES_USUARIOS" Association="Self.FK_USUARIO_CIUDADES_USUARIOS">
+      <End Role="USUARIOS" EntitySet="USUARIOS" />
+      <End Role="USUARIO_CIUDADES" EntitySet="USUARIO_CIUDADES" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

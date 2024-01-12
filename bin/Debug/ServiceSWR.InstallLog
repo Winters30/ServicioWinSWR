@@ -1,0 +1,518 @@
+﻿Instalando ensamblado 'C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.exe'.
+Los parámetros afectados son:
+   logtoconsole = 
+   logfile = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.InstallLog
+   assemblypath = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.exe
+Instalando el servicio ServiceSwr...
+Creando el origen de EventLog ServiceSwr en el registro Application...
+Deshaciendo ensamblado 'C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.exe'.
+Los parámetros afectados son:
+   logtoconsole = 
+   logfile = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.InstallLog
+   assemblypath = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.exe
+Restaurando el registro de eventos al estado anterior para el origen ServiceSwr.
+Excepción durante la fase de retroceso al estado original del instalador System.Diagnostics.EventLogInstaller.
+System.Security.SecurityException: No se encontró el origen, pero no se pudo buscar en algunos o todos los registros de eventos. Registros inaccesibles: Security.
+Excepción durante la fase de instalación de retroceso al estado original. Esta excepción se omitirá y se continuará con el retroceso al estado original. Sin embargo, puede que el equipo no recupere el estado inicial hasta que se haya completado esta fase.
+Instalando ensamblado 'C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\debug\ServiceSWR.exe'.
+Los parámetros afectados son:
+   logtoconsole = 
+   logfile = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\debug\ServiceSWR.InstallLog
+   assemblypath = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\debug\ServiceSWR.exe
+Instalando el servicio ServiceSwr...
+Creando el origen de EventLog ServiceSwr en el registro Application...
+Deshaciendo ensamblado 'C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\debug\ServiceSWR.exe'.
+Los parámetros afectados son:
+   logtoconsole = 
+   logfile = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\debug\ServiceSWR.InstallLog
+   assemblypath = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\debug\ServiceSWR.exe
+Restaurando el registro de eventos al estado anterior para el origen ServiceSwr.
+Excepción durante la fase de retroceso al estado original del instalador System.Diagnostics.EventLogInstaller.
+System.Security.SecurityException: No se encontró el origen, pero no se pudo buscar en algunos o todos los registros de eventos. Registros inaccesibles: Security.
+Excepción durante la fase de instalación de retroceso al estado original. Esta excepción se omitirá y se continuará con el retroceso al estado original. Sin embargo, puede que el equipo no recupere el estado inicial hasta que se haya completado esta fase.
+Instalando ensamblado 'C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.exe'.
+Los parámetros afectados son:
+   logtoconsole = 
+   logfile = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.InstallLog
+   assemblypath = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.exe
+Instalando el servicio ServiceSwr...
+Creando el origen de EventLog ServiceSwr en el registro Application...
+Deshaciendo ensamblado 'C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.exe'.
+Los parámetros afectados son:
+   logtoconsole = 
+   logfile = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.InstallLog
+   assemblypath = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.exe
+Restaurando el registro de eventos al estado anterior para el origen ServiceSwr.
+Excepción durante la fase de retroceso al estado original del instalador System.Diagnostics.EventLogInstaller.
+System.Security.SecurityException: No se encontró el origen, pero no se pudo buscar en algunos o todos los registros de eventos. Registros inaccesibles: Security.
+Excepción durante la fase de instalación de retroceso al estado original. Esta excepción se omitirá y se continuará con el retroceso al estado original. Sin embargo, puede que el equipo no recupere el estado inicial hasta que se haya completado esta fase.
+Instalando ensamblado 'C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.exe'.
+Los parámetros afectados son:
+   logtoconsole = 
+   logfile = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.InstallLog
+   assemblypath = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.exe
+Instalando el servicio ServiceSwr...
+Creando el origen de EventLog ServiceSwr en el registro Application...
+Deshaciendo ensamblado 'C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.exe'.
+Los parámetros afectados son:
+   logtoconsole = 
+   logfile = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.InstallLog
+   assemblypath = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.exe
+Restaurando el registro de eventos al estado anterior para el origen ServiceSwr.
+Excepción durante la fase de retroceso al estado original del instalador System.Diagnostics.EventLogInstaller.
+System.Security.SecurityException: No se encontró el origen, pero no se pudo buscar en algunos o todos los registros de eventos. Registros inaccesibles: Security.
+Excepción durante la fase de instalación de retroceso al estado original. Esta excepción se omitirá y se continuará con el retroceso al estado original. Sin embargo, puede que el equipo no recupere el estado inicial hasta que se haya completado esta fase.
+Instalando ensamblado 'C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.exe'.
+Los parámetros afectados son:
+   logtoconsole = 
+   logfile = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.InstallLog
+   assemblypath = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.exe
+Instalando el servicio ServiceSwr...
+Creando el origen de EventLog ServiceSwr en el registro Application...
+Deshaciendo ensamblado 'C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.exe'.
+Los parámetros afectados son:
+   logtoconsole = 
+   logfile = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.InstallLog
+   assemblypath = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.exe
+Restaurando el registro de eventos al estado anterior para el origen ServiceSwr.
+Excepción durante la fase de retroceso al estado original del instalador System.Diagnostics.EventLogInstaller.
+System.Security.SecurityException: No se encontró el origen, pero no se pudo buscar en algunos o todos los registros de eventos. Registros inaccesibles: Security.
+Excepción durante la fase de instalación de retroceso al estado original. Esta excepción se omitirá y se continuará con el retroceso al estado original. Sin embargo, puede que el equipo no recupere el estado inicial hasta que se haya completado esta fase.
+Instalando ensamblado 'C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.exe'.
+Los parámetros afectados son:
+   logtoconsole = 
+   logfile = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.InstallLog
+   assemblypath = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.exe
+Instalando el servicio ServiceSwr...
+Creando el origen de EventLog ServiceSwr en el registro Application...
+Deshaciendo ensamblado 'C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.exe'.
+Los parámetros afectados son:
+   logtoconsole = 
+   logfile = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.InstallLog
+   assemblypath = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.exe
+Restaurando el registro de eventos al estado anterior para el origen ServiceSwr.
+Excepción durante la fase de retroceso al estado original del instalador System.Diagnostics.EventLogInstaller.
+System.Security.SecurityException: No se encontró el origen, pero no se pudo buscar en algunos o todos los registros de eventos. Registros inaccesibles: Security.
+Excepción durante la fase de instalación de retroceso al estado original. Esta excepción se omitirá y se continuará con el retroceso al estado original. Sin embargo, puede que el equipo no recupere el estado inicial hasta que se haya completado esta fase.
+Instalando ensamblado 'C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\debug\ServiceSWR.exe'.
+Los parámetros afectados son:
+   logtoconsole = 
+   logfile = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\debug\ServiceSWR.InstallLog
+   assemblypath = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\debug\ServiceSWR.exe
+Instalando el servicio ServiceSwr...
+Creando el origen de EventLog ServiceSwr en el registro Application...
+Deshaciendo ensamblado 'C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\debug\ServiceSWR.exe'.
+Los parámetros afectados son:
+   logtoconsole = 
+   logfile = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\debug\ServiceSWR.InstallLog
+   assemblypath = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\debug\ServiceSWR.exe
+Restaurando el registro de eventos al estado anterior para el origen ServiceSwr.
+Excepción durante la fase de retroceso al estado original del instalador System.Diagnostics.EventLogInstaller.
+System.Security.SecurityException: No se encontró el origen, pero no se pudo buscar en algunos o todos los registros de eventos. Registros inaccesibles: Security.
+Excepción durante la fase de instalación de retroceso al estado original. Esta excepción se omitirá y se continuará con el retroceso al estado original. Sin embargo, puede que el equipo no recupere el estado inicial hasta que se haya completado esta fase.
+Instalando ensamblado 'C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\debug\ServiceSWR.exe'.
+Los parámetros afectados son:
+   logtoconsole = 
+   logfile = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\debug\ServiceSWR.InstallLog
+   assemblypath = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\debug\ServiceSWR.exe
+Instalando el servicio ServiceSwr...
+Creando el origen de EventLog ServiceSwr en el registro Application...
+Deshaciendo ensamblado 'C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\debug\ServiceSWR.exe'.
+Los parámetros afectados son:
+   logtoconsole = 
+   logfile = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\debug\ServiceSWR.InstallLog
+   assemblypath = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\debug\ServiceSWR.exe
+Restaurando el registro de eventos al estado anterior para el origen ServiceSwr.
+Excepción durante la fase de retroceso al estado original del instalador System.Diagnostics.EventLogInstaller.
+System.Security.SecurityException: No se encontró el origen, pero no se pudo buscar en algunos o todos los registros de eventos. Registros inaccesibles: Security.
+Excepción durante la fase de instalación de retroceso al estado original. Esta excepción se omitirá y se continuará con el retroceso al estado original. Sin embargo, puede que el equipo no recupere el estado inicial hasta que se haya completado esta fase.
+Instalando ensamblado 'C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.exe'.
+Los parámetros afectados son:
+   logtoconsole = 
+   assemblypath = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.exe
+   logfile = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.InstallLog
+Instalando el servicio ServiceSwr...
+El servicio ServiceSwr se ha instalado correctamente.
+Creando el origen de EventLog ServiceSwr en el registro Application...
+Confirmando ensamblado 'C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.exe'.
+Los parámetros afectados son:
+   logtoconsole = 
+   assemblypath = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.exe
+   logfile = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.InstallLog
+Instalando ensamblado 'C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\debug\ServiceSWR.exe'.
+Los parámetros afectados son:
+   logtoconsole = 
+   logfile = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\debug\ServiceSWR.InstallLog
+   assemblypath = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\debug\ServiceSWR.exe
+Instalando el servicio ServiceSwr...
+Creando el origen de EventLog ServiceSwr en el registro Application...
+Deshaciendo ensamblado 'C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\debug\ServiceSWR.exe'.
+Los parámetros afectados son:
+   logtoconsole = 
+   logfile = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\debug\ServiceSWR.InstallLog
+   assemblypath = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\debug\ServiceSWR.exe
+Restaurando el registro de eventos al estado anterior para el origen ServiceSwr.
+Instalando ensamblado 'C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.exe'.
+Los parámetros afectados son:
+   logtoconsole = 
+   assemblypath = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.exe
+   logfile = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.InstallLog
+Instalando el servicio ServiceSwr...
+El servicio ServiceSwr se ha instalado correctamente.
+Creando el origen de EventLog ServiceSwr en el registro Application...
+Confirmando ensamblado 'C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.exe'.
+Los parámetros afectados son:
+   logtoconsole = 
+   assemblypath = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.exe
+   logfile = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.InstallLog
+Instalando ensamblado 'C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.exe'.
+Los parámetros afectados son:
+   logtoconsole = 
+   assemblypath = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.exe
+   logfile = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.InstallLog
+Instalando el servicio ServiceSwr...
+El servicio ServiceSwr se ha instalado correctamente.
+Creando el origen de EventLog ServiceSwr en el registro Application...
+Confirmando ensamblado 'C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.exe'.
+Los parámetros afectados son:
+   logtoconsole = 
+   assemblypath = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.exe
+   logfile = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.InstallLog
+Instalando ensamblado 'C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.exe'.
+Los parámetros afectados son:
+   logtoconsole = 
+   assemblypath = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.exe
+   logfile = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.InstallLog
+Instalando el servicio ServiceSwr...
+El servicio ServiceSwr se ha instalado correctamente.
+Creando el origen de EventLog ServiceSwr en el registro Application...
+Confirmando ensamblado 'C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.exe'.
+Los parámetros afectados son:
+   logtoconsole = 
+   assemblypath = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.exe
+   logfile = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.InstallLog
+Instalando ensamblado 'C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.exe'.
+Los parámetros afectados son:
+   logtoconsole = 
+   assemblypath = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.exe
+   logfile = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.InstallLog
+Instalando el servicio ServiceSwr...
+El servicio ServiceSwr se ha instalado correctamente.
+Creando el origen de EventLog ServiceSwr en el registro Application...
+Confirmando ensamblado 'C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.exe'.
+Los parámetros afectados son:
+   logtoconsole = 
+   assemblypath = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.exe
+   logfile = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.InstallLog
+Instalando ensamblado 'C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.exe'.
+Los parámetros afectados son:
+   logtoconsole = 
+   assemblypath = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.exe
+   logfile = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.InstallLog
+Instalando el servicio ServiceSwr...
+Creando el origen de EventLog ServiceSwr en el registro Application...
+Deshaciendo ensamblado 'C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.exe'.
+Los parámetros afectados son:
+   logtoconsole = 
+   assemblypath = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.exe
+   logfile = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.InstallLog
+Restaurando el registro de eventos al estado anterior para el origen ServiceSwr.
+Instalando ensamblado 'C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.exe'.
+Los parámetros afectados son:
+   logtoconsole = 
+   assemblypath = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.exe
+   logfile = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.InstallLog
+Instalando el servicio ServiceSwr...
+Creando el origen de EventLog ServiceSwr en el registro Application...
+Deshaciendo ensamblado 'C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.exe'.
+Los parámetros afectados son:
+   logtoconsole = 
+   assemblypath = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.exe
+   logfile = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.InstallLog
+Restaurando el registro de eventos al estado anterior para el origen ServiceSwr.
+Instalando ensamblado 'C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.exe'.
+Los parámetros afectados son:
+   logtoconsole = 
+   assemblypath = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.exe
+   logfile = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.InstallLog
+Instalando el servicio ServiceSwr...
+Creando el origen de EventLog ServiceSwr en el registro Application...
+Deshaciendo ensamblado 'C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.exe'.
+Los parámetros afectados son:
+   logtoconsole = 
+   assemblypath = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.exe
+   logfile = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.InstallLog
+Restaurando el registro de eventos al estado anterior para el origen ServiceSwr.
+Instalando ensamblado 'C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.exe'.
+Los parámetros afectados son:
+   logtoconsole = 
+   assemblypath = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.exe
+   logfile = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.InstallLog
+Instalando el servicio ServiceSwr...
+Creando el origen de EventLog ServiceSwr en el registro Application...
+Deshaciendo ensamblado 'C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.exe'.
+Los parámetros afectados son:
+   logtoconsole = 
+   assemblypath = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.exe
+   logfile = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.InstallLog
+Restaurando el registro de eventos al estado anterior para el origen ServiceSwr.
+Instalando ensamblado 'C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.exe'.
+Los parámetros afectados son:
+   logtoconsole = 
+   assemblypath = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.exe
+   logfile = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.InstallLog
+Instalando el servicio ServiceSwr...
+Creando el origen de EventLog ServiceSwr en el registro Application...
+Deshaciendo ensamblado 'C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.exe'.
+Los parámetros afectados son:
+   logtoconsole = 
+   assemblypath = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.exe
+   logfile = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.InstallLog
+Restaurando el registro de eventos al estado anterior para el origen ServiceSwr.
+Instalando ensamblado 'C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.exe'.
+Los parámetros afectados son:
+   logtoconsole = 
+   assemblypath = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.exe
+   logfile = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.InstallLog
+Instalando el servicio ServiceSwr...
+El servicio ServiceSwr se ha instalado correctamente.
+Creando el origen de EventLog ServiceSwr en el registro Application...
+Confirmando ensamblado 'C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.exe'.
+Los parámetros afectados son:
+   logtoconsole = 
+   assemblypath = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.exe
+   logfile = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.InstallLog
+Instalando ensamblado 'C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.exe'.
+Los parámetros afectados son:
+   logtoconsole = 
+   assemblypath = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.exe
+   logfile = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.InstallLog
+Instalando el servicio ServiceSwr...
+El servicio ServiceSwr se ha instalado correctamente.
+Creando el origen de EventLog ServiceSwr en el registro Application...
+Confirmando ensamblado 'C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.exe'.
+Los parámetros afectados son:
+   logtoconsole = 
+   assemblypath = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.exe
+   logfile = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.InstallLog
+Instalando ensamblado 'C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.exe'.
+Los parámetros afectados son:
+   logtoconsole = 
+   assemblypath = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.exe
+   logfile = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.InstallLog
+Instalando el servicio ServiceSwr...
+El servicio ServiceSwr se ha instalado correctamente.
+Creando el origen de EventLog ServiceSwr en el registro Application...
+Confirmando ensamblado 'C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.exe'.
+Los parámetros afectados son:
+   logtoconsole = 
+   assemblypath = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.exe
+   logfile = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.InstallLog
+Instalando ensamblado 'C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.exe'.
+Los parámetros afectados son:
+   logtoconsole = 
+   assemblypath = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.exe
+   logfile = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.InstallLog
+Instalando el servicio ServiceSwr...
+El servicio ServiceSwr se ha instalado correctamente.
+Creando el origen de EventLog ServiceSwr en el registro Application...
+Confirmando ensamblado 'C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.exe'.
+Los parámetros afectados son:
+   logtoconsole = 
+   assemblypath = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.exe
+   logfile = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.InstallLog
+Instalando ensamblado 'C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.exe'.
+Los parámetros afectados son:
+   logtoconsole = 
+   assemblypath = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.exe
+   logfile = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.InstallLog
+Instalando el servicio ServiceSwr...
+El servicio ServiceSwr se ha instalado correctamente.
+Creando el origen de EventLog ServiceSwr en el registro Application...
+Confirmando ensamblado 'C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.exe'.
+Los parámetros afectados son:
+   logtoconsole = 
+   assemblypath = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.exe
+   logfile = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.InstallLog
+Instalando ensamblado 'C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.exe'.
+Los parámetros afectados son:
+   logtoconsole = 
+   assemblypath = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.exe
+   logfile = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.InstallLog
+Instalando el servicio ServiceSwr...
+El servicio ServiceSwr se ha instalado correctamente.
+Creando el origen de EventLog ServiceSwr en el registro Application...
+Confirmando ensamblado 'C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.exe'.
+Los parámetros afectados son:
+   logtoconsole = 
+   assemblypath = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.exe
+   logfile = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.InstallLog
+Instalando ensamblado 'C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.exe'.
+Los parámetros afectados son:
+   logtoconsole = 
+   assemblypath = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.exe
+   logfile = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.InstallLog
+Instalando el servicio ServiceSwr...
+El servicio ServiceSwr se ha instalado correctamente.
+Creando el origen de EventLog ServiceSwr en el registro Application...
+Confirmando ensamblado 'C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.exe'.
+Los parámetros afectados son:
+   logtoconsole = 
+   assemblypath = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.exe
+   logfile = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.InstallLog
+Instalando ensamblado 'C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.exe'.
+Los parámetros afectados son:
+   logtoconsole = 
+   assemblypath = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.exe
+   logfile = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.InstallLog
+Instalando el servicio ServiceSwr...
+El servicio ServiceSwr se ha instalado correctamente.
+Creando el origen de EventLog ServiceSwr en el registro Application...
+Confirmando ensamblado 'C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.exe'.
+Los parámetros afectados son:
+   logtoconsole = 
+   assemblypath = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.exe
+   logfile = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.InstallLog
+Instalando ensamblado 'C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.exe'.
+Los parámetros afectados son:
+   logtoconsole = 
+   assemblypath = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.exe
+   logfile = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.InstallLog
+Instalando el servicio ServiceSwr...
+El servicio ServiceSwr se ha instalado correctamente.
+Creando el origen de EventLog ServiceSwr en el registro Application...
+Confirmando ensamblado 'C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.exe'.
+Los parámetros afectados son:
+   logtoconsole = 
+   assemblypath = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.exe
+   logfile = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.InstallLog
+Instalando ensamblado 'C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.exe'.
+Los parámetros afectados son:
+   logtoconsole = 
+   assemblypath = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.exe
+   logfile = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.InstallLog
+Instalando el servicio ServiceSwr...
+El servicio ServiceSwr se ha instalado correctamente.
+Creando el origen de EventLog ServiceSwr en el registro Application...
+Confirmando ensamblado 'C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.exe'.
+Los parámetros afectados son:
+   logtoconsole = 
+   assemblypath = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.exe
+   logfile = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.InstallLog
+Instalando ensamblado 'C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.exe'.
+Los parámetros afectados son:
+   logtoconsole = 
+   assemblypath = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.exe
+   logfile = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.InstallLog
+Instalando el servicio ServiceSwr...
+El servicio ServiceSwr se ha instalado correctamente.
+Creando el origen de EventLog ServiceSwr en el registro Application...
+Confirmando ensamblado 'C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.exe'.
+Los parámetros afectados son:
+   logtoconsole = 
+   assemblypath = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.exe
+   logfile = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.InstallLog
+Instalando ensamblado 'C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.exe'.
+Los parámetros afectados son:
+   logtoconsole = 
+   assemblypath = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.exe
+   logfile = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.InstallLog
+Instalando el servicio ServiceSwr...
+El servicio ServiceSwr se ha instalado correctamente.
+Creando el origen de EventLog ServiceSwr en el registro Application...
+Confirmando ensamblado 'C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.exe'.
+Los parámetros afectados son:
+   logtoconsole = 
+   assemblypath = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.exe
+   logfile = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.InstallLog
+Instalando ensamblado 'C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.exe'.
+Los parámetros afectados son:
+   logtoconsole = 
+   assemblypath = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.exe
+   logfile = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.InstallLog
+Instalando el servicio ServiceSwr...
+El servicio ServiceSwr se ha instalado correctamente.
+Creando el origen de EventLog ServiceSwr en el registro Application...
+Confirmando ensamblado 'C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.exe'.
+Los parámetros afectados son:
+   logtoconsole = 
+   assemblypath = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.exe
+   logfile = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.InstallLog
+Instalando ensamblado 'C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.exe'.
+Los parámetros afectados son:
+   logtoconsole = 
+   assemblypath = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.exe
+   logfile = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.InstallLog
+Instalando el servicio ServiceSwr...
+El servicio ServiceSwr se ha instalado correctamente.
+Creando el origen de EventLog ServiceSwr en el registro Application...
+Confirmando ensamblado 'C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.exe'.
+Los parámetros afectados son:
+   logtoconsole = 
+   assemblypath = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.exe
+   logfile = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.InstallLog
+Instalando ensamblado 'C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.exe'.
+Los parámetros afectados son:
+   logtoconsole = 
+   assemblypath = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.exe
+   logfile = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.InstallLog
+Instalando el servicio ServiceSwr...
+El servicio ServiceSwr se ha instalado correctamente.
+Creando el origen de EventLog ServiceSwr en el registro Application...
+Confirmando ensamblado 'C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.exe'.
+Los parámetros afectados son:
+   logtoconsole = 
+   assemblypath = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.exe
+   logfile = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.InstallLog
+Instalando ensamblado 'C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.exe'.
+Los parámetros afectados son:
+   logtoconsole = 
+   assemblypath = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.exe
+   logfile = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.InstallLog
+Instalando el servicio ServiceSwr...
+El servicio ServiceSwr se ha instalado correctamente.
+Creando el origen de EventLog ServiceSwr en el registro Application...
+Confirmando ensamblado 'C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.exe'.
+Los parámetros afectados son:
+   logtoconsole = 
+   assemblypath = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.exe
+   logfile = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.InstallLog
+Instalando ensamblado 'C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.exe'.
+Los parámetros afectados son:
+   logtoconsole = 
+   assemblypath = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.exe
+   logfile = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.InstallLog
+Instalando el servicio ServiceSwr...
+El servicio ServiceSwr se ha instalado correctamente.
+Creando el origen de EventLog ServiceSwr en el registro Application...
+Confirmando ensamblado 'C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.exe'.
+Los parámetros afectados son:
+   logtoconsole = 
+   assemblypath = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.exe
+   logfile = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.InstallLog
+Instalando ensamblado 'C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.exe'.
+Los parámetros afectados son:
+   logtoconsole = 
+   assemblypath = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.exe
+   logfile = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.InstallLog
+Instalando el servicio ServiceSwr...
+El servicio ServiceSwr se ha instalado correctamente.
+Creando el origen de EventLog ServiceSwr en el registro Application...
+Confirmando ensamblado 'C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.exe'.
+Los parámetros afectados son:
+   logtoconsole = 
+   assemblypath = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.exe
+   logfile = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.InstallLog
+Instalando ensamblado 'C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.exe'.
+Los parámetros afectados son:
+   logtoconsole = 
+   assemblypath = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.exe
+   logfile = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.InstallLog
+Instalando el servicio ServiceSwr...
+El servicio ServiceSwr se ha instalado correctamente.
+Creando el origen de EventLog ServiceSwr en el registro Application...
+Confirmando ensamblado 'C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.exe'.
+Los parámetros afectados son:
+   logtoconsole = 
+   assemblypath = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.exe
+   logfile = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.InstallLog

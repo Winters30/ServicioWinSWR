@@ -1,0 +1,15 @@
+C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.exe.config
+C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.exe
+C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\ServiceSWR.pdb
+C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\obj\Debug\ServiceSWR.csproj.AssemblyReference.cache
+C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\obj\Debug\ServiceSWR.ServiceSwr.resources
+C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\obj\Debug\ServiceSWR.csproj.GenerateResource.cache
+C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\obj\Debug\ServiceSWR.csproj.CoreCompileInputs.cache
+C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\obj\Debug\ServiceSWR.exe
+C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\obj\Debug\ServiceSWR.pdb
+C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\EntityFramework.dll
+C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\EntityFramework.xml
+C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\obj\Debug\ServiceSWR.csproj.CopyComplete
+C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\obj\Debug\ServiceSWR.ProjectInstaller.resources

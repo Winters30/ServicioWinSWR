@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="69bc831df60f42c0981e34593625e96f" Name="Diagram1">
+        <EntityTypeShape EntityType="SWRModel.CIUDADES" Width="1.5" PointX="3" PointY="13.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SWRModel.CIUDADES_TIPO_RECOGIDAS" Width="1.5" PointX="5.25" PointY="13.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SWRModel.CONFIGURACION_EXCEL" Width="1.5" PointX="8.25" PointY="14" IsExpanded="true" />
+        <EntityTypeShape EntityType="SWRModel.EMPRESAS" Width="1.5" PointX="3.75" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SWRModel.ESTADOS" Width="1.5" PointX="6" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="SWRModel.ESTADOS_PUNTOS" Width="1.5" PointX="3" PointY="19.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SWRModel.FACTURACION" Width="1.5" PointX="5.25" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SWRModel.HISTORIAL" Width="1.5" PointX="10.5" PointY="9.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SWRModel.PAISES" Width="1.5" PointX="0.75" PointY="14.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SWRModel.PUNTOS_RUTA" Width="1.5" PointX="5.25" PointY="17.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SWRModel.ROLES" Width="1.5" PointX="3.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SWRModel.RUTAS" Width="1.5" PointX="8.25" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SWRModel.TARIFAS" Width="1.5" PointX="8.25" PointY="17.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SWRModel.TIPO_RECOGIDAS" Width="1.5" PointX="3" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SWRModel.USUARIO_CIUDADES" Width="1.5" PointX="11.25" PointY="14.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SWRModel.USUARIOS" Width="1.5" PointX="6" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SWRModel.DISTANCIAS" Width="1.5" PointX="7.5" PointY="20.125" IsExpanded="true" />
+        <AssociationConnector Association="SWRModel.FK_CIUDADES_PAISES" ManuallyRouted="false" />
+        <AssociationConnector Association="SWRModel.FK_CIUDADES_TIPO_RECOGIDAS_CIUDADES_TIPO_RECOGIDAS" ManuallyRouted="false" />
+        <AssociationConnector Association="SWRModel.FK_CONFIGURACION_EXCEL_CIUDADES" ManuallyRouted="false" />
+        <AssociationConnector Association="SWRModel.FK_FACTURACION_CIUDADES" ManuallyRouted="false" />
+        <AssociationConnector Association="SWRModel.FK_PUNTOS_RUTA_CIUDADES" ManuallyRouted="false" />
+        <AssociationConnector Association="SWRModel.FK_RUTAS_CIUDADES" ManuallyRouted="false" />
+        <AssociationConnector Association="SWRModel.FK_TARIFAS_CIUDADES" ManuallyRouted="false" />
+        <AssociationConnector Association="SWRModel.FK_USUARIO_CIUDADES_CIUDADES" ManuallyRouted="false" />
+        <AssociationConnector Association="SWRModel.FK_CIUDADES_TIPO_RECOGIDAS_TIPO_RECOGIDAS" ManuallyRouted="false" />
+        <AssociationConnector Association="SWRModel.FK_CONFIGURACION_EXCEL_TIPO_RECOGIDAS" ManuallyRouted="false" />
+        <AssociationConnector Association="SWRModel.FK_Usuarios_Empresas" ManuallyRouted="false" />
+        <AssociationConnector Association="SWRModel.FK_RUTAS_ESTADOS" ManuallyRouted="false" />
+        <AssociationConnector Association="SWRModel.FK_PUNTOS_RUTA_ESTADOS_PUNTOS" ManuallyRouted="false" />
+        <AssociationConnector Association="SWRModel.FK_FACTURACION_TIPO_RECOGIDAS" ManuallyRouted="false" />
+        <AssociationConnector Association="SWRModel.FK_HISTORIAL_RUTAS" ManuallyRouted="false" />
+        <AssociationConnector Association="SWRModel.FK_HISTORIAL_USUARIOS" ManuallyRouted="false" />
+        <AssociationConnector Association="SWRModel.FK_DISTANCIAS_PUNTOS_RUTA" ManuallyRouted="false" />
+        <AssociationConnector Association="SWRModel.FK_DISTANCIAS_PUNTOS_RUTA1" ManuallyRouted="false" />
+        <AssociationConnector Association="SWRModel.FK_PUNTOS_RUTA_PUNTOS_RUTA" ManuallyRouted="false" />
+        <AssociationConnector Association="SWRModel.FK_PUNTOS_RUTA_RUTAS" ManuallyRouted="false" />
+        <AssociationConnector Association="SWRModel.FK_USUARIOS_ROLES" ManuallyRouted="false" />
+        <AssociationConnector Association="SWRModel.FK_RUTAS_TIPO_RECOGIDAS" ManuallyRouted="false" />
+        <AssociationConnector Association="SWRModel.FK_RUTAS_USUARIOS" ManuallyRouted="false" />
+        <AssociationConnector Association="SWRModel.FK_TARIFAS_TIPO_RECOGIDAS" ManuallyRouted="false" />
+        <AssociationConnector Association="SWRModel.FK_USUARIO_CIUDADES_USUARIOS" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

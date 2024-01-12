@@ -1,0 +1,602 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SWRModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="CIUDADES">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="IDPAIS" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="NOMBRE_CIUDAD" Type="varchar" MaxLength="255" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CIUDADES_TIPO_RECOGIDAS">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="IDCIUDAD" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="IDTIPORECOGIDA" Type="int" Nullable="false" />
+    <Property Name="LIMITE" Type="int" />
+    <Property Name="DIAS_ELIMINACION" Type="int" />
+    <Property Name="DIAS_FINALIZACION" Type="int" />
+  </EntityType>
+  <EntityType Name="CONFIGURACION_EXCEL">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="IDCIUDAD" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="IDTIPO_RECOGIDA" Type="int" Nullable="false" />
+    <Property Name="NOMBRE_CAMPO" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="COLUMNA_CAMPO" Type="int" Nullable="false" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'SWR.dbo.DISTANCIAS' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="DISTANCIAS">
+    <Key>
+      <PropertyRef Name="ID_ORIGEN" />
+      <PropertyRef Name="ID_DESTINO" />
+    </Key>
+    <Property Name="ID_ORIGEN" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ID_DESTINO" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="DISTANCIA" Type="float" />
+    <Property Name="TIEMPO" Type="float" />
+  </EntityType>
+  <EntityType Name="EMPRESAS">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="NOMBRE" Type="nvarchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ESTADOS">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="NOMBRE" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ESTADOS_PUNTOS">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="ESTADO" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="FACTURACION">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="IDCIUDAD" Type="varchar" MaxLength="5" />
+    <Property Name="IDTIPORUTA" Type="int" />
+    <Property Name="MES" Type="int" />
+    <Property Name="ANIO" Type="int" />
+    <Property Name="NUMERO_PUNTOS" Type="int" />
+    <Property Name="TOTAL" Type="decimal" Precision="18" Scale="0" />
+  </EntityType>
+  <EntityType Name="HISTORIAL">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="IDUSUARIO" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="IDRUTA" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="IDPUNTO" Type="uniqueidentifier" />
+    <Property Name="ACCION" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="FECHA" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PAISES">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="PAIS" Type="nvarchar" MaxLength="255" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PUNTOS_RUTA">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="IDCIUDAD" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="IDRUTA" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="CODIGO" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="FECHA" Type="datetime" Nullable="false" />
+    <Property Name="FECHA_DEMANDA" Type="date" Nullable="false" />
+    <Property Name="DESCRIPCION" Type="varchar" MaxLength="500" />
+    <Property Name="LOCALIZACION" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="OBSERVACIONES" Type="varchar(max)" />
+    <Property Name="IDESTADO" Type="int" Nullable="false" />
+    <Property Name="LONGITUD" Type="varchar" MaxLength="50" />
+    <Property Name="LATITUD" Type="varchar" MaxLength="50" />
+    <Property Name="ELIMINADO" Type="bit" Nullable="false" />
+    <Property Name="ITINERARIO" Type="int" />
+    <Property Name="ORDEN" Type="int" />
+    <Property Name="COORDENADAS_CALCUDADAS" Type="bit" />
+    <Property Name="DISTANCIAS_CALCUDADAS" Type="bit" />
+  </EntityType>
+  <EntityType Name="ROLES">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="ROL" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="RUTAS">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="IDCIUDAD" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="IDTIPORECOGIDA" Type="int" Nullable="false" />
+    <Property Name="IDESTADO" Type="int" Nullable="false" />
+    <Property Name="NUMERO_PUNTOS" Type="int" Nullable="false" />
+    <Property Name="ARCHIVO_ORIGEN" Type="varchar" MaxLength="255" />
+    <Property Name="IDUSUARIO" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="FECHA_INCORPORACION" Type="datetime" Nullable="false" />
+    <Property Name="FECHA_OPTIMIZACIÓN" Type="datetime" />
+    <Property Name="FACTURADA" Type="bit" />
+  </EntityType>
+  <EntityType Name="TARIFAS">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="IDCIUDAD" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="IDTIPORUTA" Type="int" Nullable="false" />
+    <Property Name="PRECIO_PUNTO" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TIPO_RECOGIDAS">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="TIPO" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="NOMBRE" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="DESCRIPCION" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="USUARIO_CIUDADES">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="IDUSUARIO" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="IDCIUDAD" Type="varchar" MaxLength="5" Nullable="false" />
+  </EntityType>
+  <EntityType Name="USUARIOS">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="NOMBRE" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="ACTIVO" Type="bit" Nullable="false" />
+    <Property Name="EMAIL" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="IDROL" Type="int" Nullable="false" />
+    <Property Name="IDEMPRESA" Type="int" />
+  </EntityType>
+  <Association Name="FK_CIUDADES_PAISES">
+    <End Role="PAISES" Type="Self.PAISES" Multiplicity="1" />
+    <End Role="CIUDADES" Type="Self.CIUDADES" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PAISES">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="CIUDADES">
+        <PropertyRef Name="IDPAIS" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CIUDADES_TIPO_RECOGIDAS_CIUDADES_TIPO_RECOGIDAS">
+    <End Role="CIUDADES" Type="Self.CIUDADES" Multiplicity="1" />
+    <End Role="CIUDADES_TIPO_RECOGIDAS" Type="Self.CIUDADES_TIPO_RECOGIDAS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CIUDADES">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="CIUDADES_TIPO_RECOGIDAS">
+        <PropertyRef Name="IDCIUDAD" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CIUDADES_TIPO_RECOGIDAS_TIPO_RECOGIDAS">
+    <End Role="TIPO_RECOGIDAS" Type="Self.TIPO_RECOGIDAS" Multiplicity="1" />
+    <End Role="CIUDADES_TIPO_RECOGIDAS" Type="Self.CIUDADES_TIPO_RECOGIDAS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TIPO_RECOGIDAS">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="CIUDADES_TIPO_RECOGIDAS">
+        <PropertyRef Name="IDTIPORECOGIDA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CONFIGURACION_EXCEL_CIUDADES">
+    <End Role="CIUDADES" Type="Self.CIUDADES" Multiplicity="1" />
+    <End Role="CONFIGURACION_EXCEL" Type="Self.CONFIGURACION_EXCEL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CIUDADES">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="CONFIGURACION_EXCEL">
+        <PropertyRef Name="IDCIUDAD" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CONFIGURACION_EXCEL_TIPO_RECOGIDAS">
+    <End Role="TIPO_RECOGIDAS" Type="Self.TIPO_RECOGIDAS" Multiplicity="1" />
+    <End Role="CONFIGURACION_EXCEL" Type="Self.CONFIGURACION_EXCEL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TIPO_RECOGIDAS">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="CONFIGURACION_EXCEL">
+        <PropertyRef Name="IDTIPO_RECOGIDA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DISTANCIAS_PUNTOS_RUTA">
+    <End Role="PUNTOS_RUTA" Type="Self.PUNTOS_RUTA" Multiplicity="1" />
+    <End Role="DISTANCIAS" Type="Self.DISTANCIAS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PUNTOS_RUTA">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="DISTANCIAS">
+        <PropertyRef Name="ID_ORIGEN" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DISTANCIAS_PUNTOS_RUTA1">
+    <End Role="PUNTOS_RUTA" Type="Self.PUNTOS_RUTA" Multiplicity="1" />
+    <End Role="DISTANCIAS" Type="Self.DISTANCIAS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PUNTOS_RUTA">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="DISTANCIAS">
+        <PropertyRef Name="ID_DESTINO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FACTURACION_CIUDADES">
+    <End Role="CIUDADES" Type="Self.CIUDADES" Multiplicity="0..1" />
+    <End Role="FACTURACION" Type="Self.FACTURACION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CIUDADES">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="FACTURACION">
+        <PropertyRef Name="IDCIUDAD" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FACTURACION_TIPO_RECOGIDAS">
+    <End Role="TIPO_RECOGIDAS" Type="Self.TIPO_RECOGIDAS" Multiplicity="0..1" />
+    <End Role="FACTURACION" Type="Self.FACTURACION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TIPO_RECOGIDAS">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="FACTURACION">
+        <PropertyRef Name="IDTIPORUTA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HISTORIAL_RUTAS">
+    <End Role="RUTAS" Type="Self.RUTAS" Multiplicity="1" />
+    <End Role="HISTORIAL" Type="Self.HISTORIAL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RUTAS">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="HISTORIAL">
+        <PropertyRef Name="IDRUTA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HISTORIAL_USUARIOS">
+    <End Role="USUARIOS" Type="Self.USUARIOS" Multiplicity="1" />
+    <End Role="HISTORIAL" Type="Self.HISTORIAL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="USUARIOS">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="HISTORIAL">
+        <PropertyRef Name="IDUSUARIO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PUNTOS_RUTA_CIUDADES">
+    <End Role="CIUDADES" Type="Self.CIUDADES" Multiplicity="1" />
+    <End Role="PUNTOS_RUTA" Type="Self.PUNTOS_RUTA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CIUDADES">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="PUNTOS_RUTA">
+        <PropertyRef Name="IDCIUDAD" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PUNTOS_RUTA_ESTADOS_PUNTOS">
+    <End Role="ESTADOS_PUNTOS" Type="Self.ESTADOS_PUNTOS" Multiplicity="1" />
+    <End Role="PUNTOS_RUTA" Type="Self.PUNTOS_RUTA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ESTADOS_PUNTOS">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="PUNTOS_RUTA">
+        <PropertyRef Name="IDESTADO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PUNTOS_RUTA_PUNTOS_RUTA">
+    <End Role="PUNTOS_RUTA" Type="Self.PUNTOS_RUTA" Multiplicity="1" />
+    <End Role="PUNTOS_RUTA1" Type="Self.PUNTOS_RUTA" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="PUNTOS_RUTA">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="PUNTOS_RUTA1">
+        <PropertyRef Name="ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PUNTOS_RUTA_RUTAS">
+    <End Role="RUTAS" Type="Self.RUTAS" Multiplicity="1" />
+    <End Role="PUNTOS_RUTA" Type="Self.PUNTOS_RUTA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RUTAS">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="PUNTOS_RUTA">
+        <PropertyRef Name="IDRUTA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RUTAS_CIUDADES">
+    <End Role="CIUDADES" Type="Self.CIUDADES" Multiplicity="1" />
+    <End Role="RUTAS" Type="Self.RUTAS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CIUDADES">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="RUTAS">
+        <PropertyRef Name="IDCIUDAD" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RUTAS_ESTADOS">
+    <End Role="ESTADOS" Type="Self.ESTADOS" Multiplicity="1" />
+    <End Role="RUTAS" Type="Self.RUTAS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ESTADOS">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="RUTAS">
+        <PropertyRef Name="IDESTADO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RUTAS_TIPO_RECOGIDAS">
+    <End Role="TIPO_RECOGIDAS" Type="Self.TIPO_RECOGIDAS" Multiplicity="1" />
+    <End Role="RUTAS" Type="Self.RUTAS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TIPO_RECOGIDAS">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="RUTAS">
+        <PropertyRef Name="IDTIPORECOGIDA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RUTAS_USUARIOS">
+    <End Role="USUARIOS" Type="Self.USUARIOS" Multiplicity="1" />
+    <End Role="RUTAS" Type="Self.RUTAS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="USUARIOS">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="RUTAS">
+        <PropertyRef Name="IDUSUARIO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TARIFAS_CIUDADES">
+    <End Role="CIUDADES" Type="Self.CIUDADES" Multiplicity="1" />
+    <End Role="TARIFAS" Type="Self.TARIFAS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CIUDADES">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="TARIFAS">
+        <PropertyRef Name="IDCIUDAD" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TARIFAS_TIPO_RECOGIDAS">
+    <End Role="TIPO_RECOGIDAS" Type="Self.TIPO_RECOGIDAS" Multiplicity="1" />
+    <End Role="TARIFAS" Type="Self.TARIFAS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TIPO_RECOGIDAS">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="TARIFAS">
+        <PropertyRef Name="IDTIPORUTA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_USUARIO_CIUDADES_CIUDADES">
+    <End Role="CIUDADES" Type="Self.CIUDADES" Multiplicity="1" />
+    <End Role="USUARIO_CIUDADES" Type="Self.USUARIO_CIUDADES" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CIUDADES">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="USUARIO_CIUDADES">
+        <PropertyRef Name="IDCIUDAD" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_USUARIO_CIUDADES_USUARIOS">
+    <End Role="USUARIOS" Type="Self.USUARIOS" Multiplicity="1" />
+    <End Role="USUARIO_CIUDADES" Type="Self.USUARIO_CIUDADES" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="USUARIOS">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="USUARIO_CIUDADES">
+        <PropertyRef Name="IDUSUARIO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Usuarios_Empresas">
+    <End Role="EMPRESAS" Type="Self.EMPRESAS" Multiplicity="0..1" />
+    <End Role="USUARIOS" Type="Self.USUARIOS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EMPRESAS">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="USUARIOS">
+        <PropertyRef Name="IDEMPRESA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_USUARIOS_ROLES">
+    <End Role="ROLES" Type="Self.ROLES" Multiplicity="1" />
+    <End Role="USUARIOS" Type="Self.USUARIOS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ROLES">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="USUARIOS">
+        <PropertyRef Name="IDROL" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="SWRModelStoreContainer">
+    <EntitySet Name="CIUDADES" EntityType="Self.CIUDADES" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CIUDADES_TIPO_RECOGIDAS" EntityType="Self.CIUDADES_TIPO_RECOGIDAS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CONFIGURACION_EXCEL" EntityType="Self.CONFIGURACION_EXCEL" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EMPRESAS" EntityType="Self.EMPRESAS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ESTADOS" EntityType="Self.ESTADOS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ESTADOS_PUNTOS" EntityType="Self.ESTADOS_PUNTOS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FACTURACION" EntityType="Self.FACTURACION" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="HISTORIAL" EntityType="Self.HISTORIAL" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PAISES" EntityType="Self.PAISES" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PUNTOS_RUTA" EntityType="Self.PUNTOS_RUTA" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ROLES" EntityType="Self.ROLES" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RUTAS" EntityType="Self.RUTAS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TARIFAS" EntityType="Self.TARIFAS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TIPO_RECOGIDAS" EntityType="Self.TIPO_RECOGIDAS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="USUARIO_CIUDADES" EntityType="Self.USUARIO_CIUDADES" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="USUARIOS" EntityType="Self.USUARIOS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DISTANCIAS" EntityType="Self.DISTANCIAS" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [DISTANCIAS].[ID_ORIGEN] AS [ID_ORIGEN], 
+    [DISTANCIAS].[ID_DESTINO] AS [ID_DESTINO], 
+    [DISTANCIAS].[DISTANCIA] AS [DISTANCIA], 
+    [DISTANCIAS].[TIEMPO] AS [TIEMPO]
+    FROM [dbo].[DISTANCIAS] AS [DISTANCIAS]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK_CIUDADES_PAISES" Association="Self.FK_CIUDADES_PAISES">
+      <End Role="PAISES" EntitySet="PAISES" />
+      <End Role="CIUDADES" EntitySet="CIUDADES" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CIUDADES_TIPO_RECOGIDAS_CIUDADES_TIPO_RECOGIDAS" Association="Self.FK_CIUDADES_TIPO_RECOGIDAS_CIUDADES_TIPO_RECOGIDAS">
+      <End Role="CIUDADES" EntitySet="CIUDADES" />
+      <End Role="CIUDADES_TIPO_RECOGIDAS" EntitySet="CIUDADES_TIPO_RECOGIDAS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CIUDADES_TIPO_RECOGIDAS_TIPO_RECOGIDAS" Association="Self.FK_CIUDADES_TIPO_RECOGIDAS_TIPO_RECOGIDAS">
+      <End Role="TIPO_RECOGIDAS" EntitySet="TIPO_RECOGIDAS" />
+      <End Role="CIUDADES_TIPO_RECOGIDAS" EntitySet="CIUDADES_TIPO_RECOGIDAS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CONFIGURACION_EXCEL_CIUDADES" Association="Self.FK_CONFIGURACION_EXCEL_CIUDADES">
+      <End Role="CIUDADES" EntitySet="CIUDADES" />
+      <End Role="CONFIGURACION_EXCEL" EntitySet="CONFIGURACION_EXCEL" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CONFIGURACION_EXCEL_TIPO_RECOGIDAS" Association="Self.FK_CONFIGURACION_EXCEL_TIPO_RECOGIDAS">
+      <End Role="TIPO_RECOGIDAS" EntitySet="TIPO_RECOGIDAS" />
+      <End Role="CONFIGURACION_EXCEL" EntitySet="CONFIGURACION_EXCEL" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DISTANCIAS_PUNTOS_RUTA" Association="Self.FK_DISTANCIAS_PUNTOS_RUTA">
+      <End Role="PUNTOS_RUTA" EntitySet="PUNTOS_RUTA" />
+      <End Role="DISTANCIAS" EntitySet="DISTANCIAS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DISTANCIAS_PUNTOS_RUTA1" Association="Self.FK_DISTANCIAS_PUNTOS_RUTA1">
+      <End Role="PUNTOS_RUTA" EntitySet="PUNTOS_RUTA" />
+      <End Role="DISTANCIAS" EntitySet="DISTANCIAS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FACTURACION_CIUDADES" Association="Self.FK_FACTURACION_CIUDADES">
+      <End Role="CIUDADES" EntitySet="CIUDADES" />
+      <End Role="FACTURACION" EntitySet="FACTURACION" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FACTURACION_TIPO_RECOGIDAS" Association="Self.FK_FACTURACION_TIPO_RECOGIDAS">
+      <End Role="TIPO_RECOGIDAS" EntitySet="TIPO_RECOGIDAS" />
+      <End Role="FACTURACION" EntitySet="FACTURACION" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HISTORIAL_RUTAS" Association="Self.FK_HISTORIAL_RUTAS">
+      <End Role="RUTAS" EntitySet="RUTAS" />
+      <End Role="HISTORIAL" EntitySet="HISTORIAL" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HISTORIAL_USUARIOS" Association="Self.FK_HISTORIAL_USUARIOS">
+      <End Role="USUARIOS" EntitySet="USUARIOS" />
+      <End Role="HISTORIAL" EntitySet="HISTORIAL" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PUNTOS_RUTA_CIUDADES" Association="Self.FK_PUNTOS_RUTA_CIUDADES">
+      <End Role="CIUDADES" EntitySet="CIUDADES" />
+      <End Role="PUNTOS_RUTA" EntitySet="PUNTOS_RUTA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PUNTOS_RUTA_ESTADOS_PUNTOS" Association="Self.FK_PUNTOS_RUTA_ESTADOS_PUNTOS">
+      <End Role="ESTADOS_PUNTOS" EntitySet="ESTADOS_PUNTOS" />
+      <End Role="PUNTOS_RUTA" EntitySet="PUNTOS_RUTA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PUNTOS_RUTA_PUNTOS_RUTA" Association="Self.FK_PUNTOS_RUTA_PUNTOS_RUTA">
+      <End Role="PUNTOS_RUTA" EntitySet="PUNTOS_RUTA" />
+      <End Role="PUNTOS_RUTA1" EntitySet="PUNTOS_RUTA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PUNTOS_RUTA_RUTAS" Association="Self.FK_PUNTOS_RUTA_RUTAS">
+      <End Role="RUTAS" EntitySet="RUTAS" />
+      <End Role="PUNTOS_RUTA" EntitySet="PUNTOS_RUTA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RUTAS_CIUDADES" Association="Self.FK_RUTAS_CIUDADES">
+      <End Role="CIUDADES" EntitySet="CIUDADES" />
+      <End Role="RUTAS" EntitySet="RUTAS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RUTAS_ESTADOS" Association="Self.FK_RUTAS_ESTADOS">
+      <End Role="ESTADOS" EntitySet="ESTADOS" />
+      <End Role="RUTAS" EntitySet="RUTAS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RUTAS_TIPO_RECOGIDAS" Association="Self.FK_RUTAS_TIPO_RECOGIDAS">
+      <End Role="TIPO_RECOGIDAS" EntitySet="TIPO_RECOGIDAS" />
+      <End Role="RUTAS" EntitySet="RUTAS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RUTAS_USUARIOS" Association="Self.FK_RUTAS_USUARIOS">
+      <End Role="USUARIOS" EntitySet="USUARIOS" />
+      <End Role="RUTAS" EntitySet="RUTAS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TARIFAS_CIUDADES" Association="Self.FK_TARIFAS_CIUDADES">
+      <End Role="CIUDADES" EntitySet="CIUDADES" />
+      <End Role="TARIFAS" EntitySet="TARIFAS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TARIFAS_TIPO_RECOGIDAS" Association="Self.FK_TARIFAS_TIPO_RECOGIDAS">
+      <End Role="TIPO_RECOGIDAS" EntitySet="TIPO_RECOGIDAS" />
+      <End Role="TARIFAS" EntitySet="TARIFAS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_USUARIO_CIUDADES_CIUDADES" Association="Self.FK_USUARIO_CIUDADES_CIUDADES">
+      <End Role="CIUDADES" EntitySet="CIUDADES" />
+      <End Role="USUARIO_CIUDADES" EntitySet="USUARIO_CIUDADES" />
+    </AssociationSet>
+    <AssociationSet Name="FK_USUARIO_CIUDADES_USUARIOS" Association="Self.FK_USUARIO_CIUDADES_USUARIOS">
+      <End Role="USUARIOS" EntitySet="USUARIOS" />
+      <End Role="USUARIO_CIUDADES" EntitySet="USUARIO_CIUDADES" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Usuarios_Empresas" Association="Self.FK_Usuarios_Empresas">
+      <End Role="EMPRESAS" EntitySet="EMPRESAS" />
+      <End Role="USUARIOS" EntitySet="USUARIOS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_USUARIOS_ROLES" Association="Self.FK_USUARIOS_ROLES">
+      <End Role="ROLES" EntitySet="ROLES" />
+      <End Role="USUARIOS" EntitySet="USUARIOS" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

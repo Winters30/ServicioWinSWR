@@ -1,0 +1,16 @@
+﻿Instalando ensamblado 'C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\obj\Debug\ServiceSWR.exe'.
+Los parámetros afectados son:
+   logtoconsole = 
+   assemblypath = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\obj\Debug\ServiceSWR.exe
+   logfile = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\obj\Debug\ServiceSWR.InstallLog
+Excepción al intentar encontrar los instaladores en el ensamblado C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\obj\Debug\ServiceSWR.exe.
+System.Reflection.ReflectionTypeLoadException: No se pueden cargar uno o varios tipos requeridos. Recupere la propiedad LoaderExceptions para obtener más información.
+Anulando la instalación de C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\obj\Debug\ServiceSWR.exe.
+Deshaciendo ensamblado 'C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\obj\Debug\ServiceSWR.exe'.
+Los parámetros afectados son:
+   logtoconsole = 
+   assemblypath = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\obj\Debug\ServiceSWR.exe
+   logfile = C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\obj\Debug\ServiceSWR.InstallLog
+Excepción al intentar encontrar los instaladores en el ensamblado C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\obj\Debug\ServiceSWR.exe.
+System.Reflection.ReflectionTypeLoadException: No se pueden cargar uno o varios tipos requeridos. Recupere la propiedad LoaderExceptions para obtener más información.
+Anulando la instalación de C:\Users\USUARIO\Desktop\ASP-MVC\ServiceSWR\obj\Debug\ServiceSWR.exe.
